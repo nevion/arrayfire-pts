@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v4.8.3 (Sokndal)-->
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>ArrayFire</Title>
+    <AppVersion>1.2pts1</AppVersion>
+    <Description>ArrayFire is an GPU and CPU numeric processing library, this test uses the arrayfire benchmarking program from Shehzan Mohammed
+    </Description>
+    <ResultScale>μs</ResultScale>
+    <Proportion>LIB</Proportion>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+  <TestProfile>
+    <Version>3.4.0</Version>
+    <SupportedPlatforms>Linux, BSD, MacOSX</SupportedPlatforms>
+    <SoftwareType>Utility</SoftwareType>
+    <TestType>Processor</TestType>
+    <License>Free</License>
+    <Status>Verified</Status>
+    <ExternalDependencies>build-utilities,opencl,CUDA</ExternalDependencies>
+    <EnvironmentSize>1.0</EnvironmentSize>
+    <ProjectURL>http://davibu.interfree.it/opencl/ArrayFire/ArrayFire.html</ProjectURL>
+    <InternalTags>OpenCL</InternalTags>
+    <InternalTags>CUDA</InternalTags>
+    <Maintainer>Jason Newton</Maintainer>
+  </TestProfile>
+  <TestSettings>
+    <Default>
+    </Default>
+    <Option>
+      <DisplayName>Benchmark</DisplayName>
+      <Identifier>benchmark</Identifier>
+      <Menu>
+        <Entry>
+          <Name>Sort_f32_ASCEND</Name>
+          <Value>Sort_f32_ASCEND</Value>
+        </Entry>
+      </Menu>
+    </Option>
+  </TestSettings>
+</PhoronixTestSuite>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <ResultsParser>
+    <OutputTemplate>Sort            | Sort_f32_ASCEND |        16777216 |              10 |              10 |     84942.00000 |      #_RESULT_# |          117.73 |</OutputTemplate>
+    <!-- <OutputTemplate>[FINAL] Elapsed Time: 146.311 sec - Sample/sec #_RESULT_#</OutputTemplate> -->
+    <MatchToTestArguments>Sort_f32_ASCEND</MatchToTestArguments>
+  </ResultsParser>
+</PhoronixTestSuite>
