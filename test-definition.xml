@@ -33,28 +33,29 @@
       <ArgumentPrefix></ArgumentPrefix>
       <ArgumentPostfix></ArgumentPostfix>
       <DefaultEntry>0</DefaultEntry>
-    </Option>
       <Menu>
         <Entry>
           <Name>OpenCL</Name>
-          <Value>./bin/benchmark_opencl</Value>
+          <Value>bin/benchmark_opencl</Value>
         </Entry>
       </Menu>
       <Menu>
         <Entry>
           <Name>CUDA</Name>
-          <Value>./bin/benchmark_cuda</Value>
+          <Value>bin/benchmark_cuda</Value>
         </Entry>
       </Menu>
       <Menu>
         <Entry>
           <Name>CPU</Name>
-          <Value>./bin/benchmark_cpu</Value>
+          <Value>bin/benchmark_cpu</Value>
         </Entry>
       </Menu>
+    </Option>
     <Option>
       <DisplayName>Benchmark</DisplayName>
-      <Identifier>--benchmark</Identifier>
+      <Identifier>benchmark</Identifier>
+      <ArgumentPrefix>--benchmark=</ArgumentPrefix>
       <Menu>
         <Entry>
           <Name>Sort_f32_ASCEND</Name>
