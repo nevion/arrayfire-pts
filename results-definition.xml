@@ -6,46 +6,6 @@
     <MatchToTestArguments>Sort_f32_ASCEND</MatchToTestArguments>
     </ResultsParser> -->
 <ResultsParser>
-    <OutputTemplate>Sort            |  |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments></MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
-    <OutputTemplate>Sort            | run |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments>run</MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
-    <OutputTemplate>Sort            | run |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments>run</MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
-    <OutputTemplate>Sort            | exclude |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments>exclude</MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
-    <OutputTemplate>Sort            | start |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments>start</MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
-    <OutputTemplate>Sort            | exclude |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments>exclude</MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
-    <OutputTemplate>Sort            |  |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments></MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
-    <OutputTemplate>Sort            | of |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments>of</MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
-    <OutputTemplate>Sort            | Benchmark |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments>Benchmark</MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
-    <OutputTemplate>Sort            | ---------- |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
-    <MatchToTestArguments>----------</MatchToTestArguments>
-</ResultsParser>
-<ResultsParser>
     <OutputTemplate>Sort            | Accumulate_1D_f32 |        1 |              10 |              10 |     1.00000 |      #_RESULT_# |          0.0 |</OutputTemplate>
     <MatchToTestArguments>Accumulate_1D_f32</MatchToTestArguments>
 </ResultsParser>
