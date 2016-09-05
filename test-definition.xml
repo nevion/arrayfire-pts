@@ -31,7 +31,7 @@
       <DisplayName>Platform</DisplayName>
       <Identifier>platform</Identifier>
       <ArgumentPrefix></ArgumentPrefix>
-      <ArgumentPostfix></ArgumentPostfix>
+      <ArgumentPostfix> --use-max-problemspace</ArgumentPostfix>
       <DefaultEntry>0</DefaultEntry>
       <Menu>
         <Entry>
