@@ -17,7 +17,7 @@
     <TestType>Processor</TestType>
     <License>Free</License>
     <Status>Verified</Status>
-    <ExternalDependencies>build-utilities,opencl,CUDA</ExternalDependencies>
+    <ExternalDependencies>build-utilities,opencl,CUDA,arrayfire</ExternalDependencies>
     <EnvironmentSize>1.0</EnvironmentSize>
     <ProjectURL>http://davibu.interfree.it/opencl/ArrayFire/ArrayFire.html</ProjectURL>
     <InternalTags>OpenCL</InternalTags>
