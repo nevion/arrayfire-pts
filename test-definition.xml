@@ -3,7 +3,7 @@
 <PhoronixTestSuite>
   <TestInformation>
     <Title>ArrayFire</Title>
-    <AppVersion>1.2pts1</AppVersion>
+    <AppVersion>1.0</AppVersion>
     <Description>ArrayFire is an GPU and CPU numeric processing library, this test uses the arrayfire benchmarking program from Shehzan Mohammed
     </Description>
     <ResultScale>μs</ResultScale>
