@@ -9,6 +9,11 @@
 #to install via the shell package ArrayFire supplies - use the prefix option ./ArrayFire-v3.4.2_Linux_x86_64.sh --prefix=/opt
 #when prompted with "Do you want to include the subdirectory arrayfire-3?", say yes
 
+#launch with the environment variable OpenCL_INCLUDE_DIR set to the path to cl.h
+#e.g. OpenCL_INCLUDE_DIR=/opt/rocm/opencl/include/CL/ phoronix-test-suite install arrayfire
+#also make sure to use the correct path to your OpenCL shared library
+#e.g. LD_LIBRARY_PATH=/opt/rocm/opencl/lib/x86_64 phoronix-test-suite run arrayfire
+
 if [ -d /usr/local/cuda ]
 then
     PATH="/usr/local/cuda/bin:$PATH"
@@ -48,6 +53,6 @@ if [ -n COMPUTE_DEVICE ]
 then
    export COMPUTE_DEVICE=0
 fi
-timeout -s SIGKILL --preserve-status 30 ./\$@ -d ${COMPUTE_DEVICE} > \$LOG_FILE 2>&1
+timeout -s SIGKILL --preserve-status 30 ./\$@ -d \${COMPUTE_DEVICE} > \$LOG_FILE 2>&1
 echo \$? > ~/test-exit-status" > arrayfire
 chmod +x arrayfire
