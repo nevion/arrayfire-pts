@@ -5,6 +5,10 @@
 # https://github.com/arrayfire/arrayfire
 # sudo apt-get install --no-install-recommends libboost-all-dev
 
+#ArrayFire is expected to be installed to /opt
+#to install via the shell package ArrayFire supplies - use the prefix option ./ArrayFire-v3.4.2_Linux_x86_64.sh --prefix=/opt
+#when prompted with "Do you want to include the subdirectory arrayfire-3?", say yes
+
 if [ -d /usr/local/cuda ]
 then
     PATH="/usr/local/cuda/bin:$PATH"
