@@ -44,6 +44,6 @@ if [ -n COMPUTE_DEVICE ]
 then
    export COMPUTE_DEVICE=0
 fi
-./\$@ -d ${COMPUTE_DEVICE} > \$LOG_FILE 2>&1
+timeout -s SIGKILL --preserve-status 30 ./\$@ -d ${COMPUTE_DEVICE} > \$LOG_FILE 2>&1
 echo \$? > ~/test-exit-status" > arrayfire
 chmod +x arrayfire
