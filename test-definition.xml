@@ -58,12 +58,6 @@
       <Identifier>benchmark</Identifier>
       <ArgumentPrefix>--benchmark=</ArgumentPrefix>
       <Menu>
-        <Entry>
-          <Name>Sort_f32_ASCEND</Name>
-          <Value>Sort_f32_ASCEND</Value>
-        </Entry>
-      </Menu>
-      <Menu>
           <Entry>
               <Name>Accumulate_1D_f32</Name>
               <Value>Accumulate_1D_f32</Value>
