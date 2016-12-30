@@ -5,6 +5,8 @@
 # https://github.com/arrayfire/arrayfire
 # sudo apt-get install --no-install-recommends libboost-all-dev
 
+#procuring arrayfire is easy!  We prefer the no-gl version so we can run headless
+# VER=3.4.2; wget http://arrayfire.com/installer_archive/${VER}/ArrayFire-no-gl-v${VER}_Linux_x86_64.sh
 #ArrayFire is expected to be installed to /opt
 #to install via the shell package ArrayFire supplies - use the prefix option ./ArrayFire-v3.4.2_Linux_x86_64.sh --prefix=/opt
 #when prompted with "Do you want to include the subdirectory arrayfire-3?", say yes
@@ -54,5 +56,9 @@ then
    export COMPUTE_DEVICE=0
 fi
 timeout -s SIGKILL --preserve-status 30 ./\$@ -d \${COMPUTE_DEVICE} > \$LOG_FILE 2>&1
-echo \$? > ~/test-exit-status" > arrayfire
+echo \$? > ~/test-exit-status
+perl -pi -e 's/\e\[(\d+)(;\d+)*m//g' \$LOG_FILE  #scrub ansi codes
+awk 'NR > 4 { print \$0 } NR <= 4 { next }' \${LOG_FILE} > \${LOG_FILE}.tmp; mv \${LOG_FILE}.tmp \${LOG_FILE}
+grep -v Baseline \${LOG_FILE} > \${LOG_FILE}.tmp; mv \${LOG_FILE}.tmp \${LOG_FILE}
+" > arrayfire
 chmod +x arrayfire
