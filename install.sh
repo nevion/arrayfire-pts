@@ -23,7 +23,7 @@ fi
 if [ ! -e arrayfire-benchmark.git/bin/benchmark_opencl ]
 then
     pushd arrayfire-benchmark.git
-    git checkout wip
+    #git checkout wip
     pushd build
     cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DArrayFire_DIR=/opt/arrayfire-3/share/ArrayFire/cmake -DOpenCL_INCLUDE_DIR=${OpenCL_INCLUDE_DIR} ..
     #make -j${NUM_CPU_CORES} benchmark_opencl
