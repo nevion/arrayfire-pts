@@ -8,6 +8,7 @@ output.lines.map(&:chomp).each do |benchmark|
     puts(cmd)
     output = `#{cmd}`
     if $?.exitstatus != 0
+        puts "${benchmark} failed to run in given timeperiod, adding to failures"
         open('failures.txt', 'a') { |f|
               f.puts "#{benchmark}"
               f.puts output
