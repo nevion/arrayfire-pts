@@ -1,13 +1,14 @@
 output = `./bin/benchmark_cpu -l|grep -v JIT|awk ' NR > 10 { print $2 } NR <= 10 { next }'`
 #puts(output)
+puts "<Menu>"
+
 output.lines.map(&:chomp).each do |benchmark|
     t="""
-<Menu>
-<Entry>
-  <Name>#{benchmark}</Name>
-  <Value>#{benchmark}</Value>
-</Entry>
-</Menu>
+    <Entry>
+      <Name>#{benchmark}</Name>
+      <Value>#{benchmark}</Value>
+    </Entry>
 """
-    puts(t.strip)
+    puts(t[1..-1])
 end
+puts "</Menu>"
