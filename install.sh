@@ -29,7 +29,7 @@ fi
 
 if [ ! -e arrayfire-benchmark.git ]
 then
-    git clone -b wip --recursive --depth=1 https://github.com/nevion/arrayfire-benchmark.git arrayfire-benchmark.git
+    git clone -b master --recursive --depth=1 https://github.com/nevion/arrayfire-benchmark.git arrayfire-benchmark.git
 fi
 if [ ! -e arrayfire-benchmark.git/bin/benchmark_opencl ]
 then
