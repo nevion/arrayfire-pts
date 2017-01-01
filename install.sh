@@ -55,7 +55,7 @@ if [ -n COMPUTE_DEVICE ]
 then
    export COMPUTE_DEVICE=0
 fi
-timeout -s SIGKILL --preserve-status 30 ./\$@ -d \${COMPUTE_DEVICE} > \$LOG_FILE 2>&1
+timeout -s SIGKILL --preserve-status 30 ./\$@ -d \${COMPUTE_DEVICE} > \$LOG_FILE
 echo \$? > ~/test-exit-status
 perl -pi -e 's/\e\[(\d+)(;\d+)*m//g' \$LOG_FILE  #scrub ansi codes
 awk 'NR > 4 { print \$0 } NR <= 4 { next }' \${LOG_FILE} > \${LOG_FILE}.tmp; mv \${LOG_FILE}.tmp \${LOG_FILE}
