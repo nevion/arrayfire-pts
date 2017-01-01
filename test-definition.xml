@@ -8,7 +8,7 @@
     </Description>
     <ResultScale>μs</ResultScale>
     <Proportion>LIB</Proportion>
-    <TimesToRun>1</TimesToRun>
+    <TimesToRun>3</TimesToRun>
   </TestInformation>
   <TestProfile>
     <Version>3.4.0</Version>
@@ -31,7 +31,7 @@
       <DisplayName>Platform</DisplayName>
       <Identifier>platform</Identifier>
       <ArgumentPrefix></ArgumentPrefix>
-      <ArgumentPostfix> --use-max-problemspace</ArgumentPostfix>
+      <ArgumentPostfix> --use-max-problemspace --samples=1 --iterations=1</ArgumentPostfix>
       <DefaultEntry>0</DefaultEntry>
       <Menu>
         <Entry>
