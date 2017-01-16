@@ -38,14 +38,14 @@
           <Name>OpenCL</Name>
           <Value>bin/benchmark_opencl</Value>
         </Entry>
-        <Entry>
+        <!--<Entry>
           <Name>CUDA</Name>
           <Value>bin/benchmark_cuda</Value>
-        </Entry>
-        <Entry>
+        </Entry>-->
+        <!--<Entry>
           <Name>CPU</Name>
           <Value>bin/benchmark_cpu</Value>
-        </Entry>
+        </Entry>-->
       </Menu>
     </Option>
     <Option>
@@ -62,12 +62,44 @@
             <Value>Accumulate_1D_f64</Value>
           </Entry>
           <Entry>
+            <Name>Accumulate_1D_s16</Name>
+            <Value>Accumulate_1D_s16</Value>
+          </Entry>
+          <Entry>
+            <Name>Accumulate_1D_s32</Name>
+            <Value>Accumulate_1D_s32</Value>
+          </Entry>
+          <Entry>
+            <Name>Accumulate_1D_s64</Name>
+            <Value>Accumulate_1D_s64</Value>
+          </Entry>
+          <Entry>
+            <Name>Accumulate_1D_u8</Name>
+            <Value>Accumulate_1D_u8</Value>
+          </Entry>
+          <Entry>
             <Name>Accumulate_2D_f32</Name>
             <Value>Accumulate_2D_f32</Value>
           </Entry>
           <Entry>
             <Name>Accumulate_2D_f64</Name>
             <Value>Accumulate_2D_f64</Value>
+          </Entry>
+          <Entry>
+            <Name>Accumulate_2D_s16</Name>
+            <Value>Accumulate_2D_s16</Value>
+          </Entry>
+          <Entry>
+            <Name>Accumulate_2D_s32</Name>
+            <Value>Accumulate_2D_s32</Value>
+          </Entry>
+          <Entry>
+            <Name>Accumulate_2D_s64</Name>
+            <Value>Accumulate_2D_s64</Value>
+          </Entry>
+          <Entry>
+            <Name>Accumulate_2D_u8</Name>
+            <Value>Accumulate_2D_u8</Value>
           </Entry>
           <Entry>
             <Name>Bandwidth_f32</Name>
@@ -78,12 +110,36 @@
             <Value>Bandwidth_f64</Value>
           </Entry>
           <Entry>
+            <Name>Bandwidth_s32</Name>
+            <Value>Bandwidth_s32</Value>
+          </Entry>
+          <Entry>
+            <Name>Bandwidth_s64</Name>
+            <Value>Bandwidth_s64</Value>
+          </Entry>
+          <Entry>
+            <Name>Bandwidth_u8</Name>
+            <Value>Bandwidth_u8</Value>
+          </Entry>
+          <Entry>
             <Name>BilateralFilter_f32</Name>
             <Value>BilateralFilter_f32</Value>
           </Entry>
           <Entry>
             <Name>BilateralFilter_f64</Name>
             <Value>BilateralFilter_f64</Value>
+          </Entry>
+          <Entry>
+            <Name>BilateralFilter_s16</Name>
+            <Value>BilateralFilter_s16</Value>
+          </Entry>
+          <Entry>
+            <Name>BilateralFilter_s32</Name>
+            <Value>BilateralFilter_s32</Value>
+          </Entry>
+          <Entry>
+            <Name>BilateralFilter_u8</Name>
+            <Value>BilateralFilter_u8</Value>
           </Entry>
           <Entry>
             <Name>Convolve_f32_11x11</Name>
@@ -108,6 +164,54 @@
           <Entry>
             <Name>Convolve_f64_9x9</Name>
             <Value>Convolve_f64_9x9</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_s16_11x11</Name>
+            <Value>Convolve_s16_11x11</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_s16_5x5</Name>
+            <Value>Convolve_s16_5x5</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_s16_9x9</Name>
+            <Value>Convolve_s16_9x9</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_s32_11x11</Name>
+            <Value>Convolve_s32_11x11</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_s32_5x5</Name>
+            <Value>Convolve_s32_5x5</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_s32_9x9</Name>
+            <Value>Convolve_s32_9x9</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_s64_11x11</Name>
+            <Value>Convolve_s64_11x11</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_s64_5x5</Name>
+            <Value>Convolve_s64_5x5</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_s64_9x9</Name>
+            <Value>Convolve_s64_9x9</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_u8_11x11</Name>
+            <Value>Convolve_u8_11x11</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_u8_5x5</Name>
+            <Value>Convolve_u8_5x5</Value>
+          </Entry>
+          <Entry>
+            <Name>Convolve_u8_9x9</Name>
+            <Value>Convolve_u8_9x9</Value>
           </Entry>
           <Entry>
             <Name>Data_f32_CONSTANT</Name>
@@ -150,340 +254,604 @@
             <Value>Data_f64_RANGE</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_ADD</Name>
-            <Value>ELWISE_f32_ADD</Value>
+            <Name>Elwise_f32_ADD</Name>
+            <Value>Elwise_f32_ADD</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_ADD_CONSTANT</Name>
-            <Value>ELWISE_f32_ADD_CONSTANT</Value>
+            <Name>Elwise_f32_ADD_CONSTANT</Name>
+            <Value>Elwise_f32_ADD_CONSTANT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_ARC_COS</Name>
-            <Value>ELWISE_f32_ARC_COS</Value>
+            <Name>Elwise_f32_ARC_COS</Name>
+            <Value>Elwise_f32_ARC_COS</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_ARC_SIN</Name>
-            <Value>ELWISE_f32_ARC_SIN</Value>
+            <Name>Elwise_f32_ARC_SIN</Name>
+            <Value>Elwise_f32_ARC_SIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_ARC_TAN</Name>
-            <Value>ELWISE_f32_ARC_TAN</Value>
+            <Name>Elwise_f32_ARC_TAN</Name>
+            <Value>Elwise_f32_ARC_TAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_ATAN2</Name>
-            <Value>ELWISE_f32_ATAN2</Value>
+            <Name>Elwise_f32_ATAN2</Name>
+            <Value>Elwise_f32_ATAN2</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_CBRT</Name>
-            <Value>ELWISE_f32_CBRT</Value>
+            <Name>Elwise_f32_CBRT</Name>
+            <Value>Elwise_f32_CBRT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_COS</Name>
-            <Value>ELWISE_f32_COS</Value>
+            <Name>Elwise_f32_COS</Name>
+            <Value>Elwise_f32_COS</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_DIVIDE</Name>
-            <Value>ELWISE_f32_DIVIDE</Value>
+            <Name>Elwise_f32_DIVIDE</Name>
+            <Value>Elwise_f32_DIVIDE</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_DIVIDE_CONSTANT</Name>
-            <Value>ELWISE_f32_DIVIDE_CONSTANT</Value>
+            <Name>Elwise_f32_DIVIDE_CONSTANT</Name>
+            <Value>Elwise_f32_DIVIDE_CONSTANT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_ERF</Name>
-            <Value>ELWISE_f32_ERF</Value>
+            <Name>Elwise_f32_ERF</Name>
+            <Value>Elwise_f32_ERF</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_ERFC</Name>
-            <Value>ELWISE_f32_ERFC</Value>
+            <Name>Elwise_f32_ERFC</Name>
+            <Value>Elwise_f32_ERFC</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_EXP</Name>
-            <Value>ELWISE_f32_EXP</Value>
+            <Name>Elwise_f32_EXP</Name>
+            <Value>Elwise_f32_EXP</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_EXP_M1</Name>
-            <Value>ELWISE_f32_EXP_M1</Value>
+            <Name>Elwise_f32_EXP_M1</Name>
+            <Value>Elwise_f32_EXP_M1</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_HYPOT</Name>
-            <Value>ELWISE_f32_HYPOT</Value>
+            <Name>Elwise_f32_HYPOT</Name>
+            <Value>Elwise_f32_HYPOT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_HYP_ARC_COS</Name>
-            <Value>ELWISE_f32_HYP_ARC_COS</Value>
+            <Name>Elwise_f32_HYP_ARC_COS</Name>
+            <Value>Elwise_f32_HYP_ARC_COS</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_HYP_ARC_SIN</Name>
-            <Value>ELWISE_f32_HYP_ARC_SIN</Value>
+            <Name>Elwise_f32_HYP_ARC_SIN</Name>
+            <Value>Elwise_f32_HYP_ARC_SIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_HYP_ARC_TAN</Name>
-            <Value>ELWISE_f32_HYP_ARC_TAN</Value>
+            <Name>Elwise_f32_HYP_ARC_TAN</Name>
+            <Value>Elwise_f32_HYP_ARC_TAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_HYP_COS</Name>
-            <Value>ELWISE_f32_HYP_COS</Value>
+            <Name>Elwise_f32_HYP_COS</Name>
+            <Value>Elwise_f32_HYP_COS</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_HYP_SIN</Name>
-            <Value>ELWISE_f32_HYP_SIN</Value>
+            <Name>Elwise_f32_HYP_SIN</Name>
+            <Value>Elwise_f32_HYP_SIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_HYP_TAN</Name>
-            <Value>ELWISE_f32_HYP_TAN</Value>
+            <Name>Elwise_f32_HYP_TAN</Name>
+            <Value>Elwise_f32_HYP_TAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_IS_INF</Name>
-            <Value>ELWISE_f32_IS_INF</Value>
+            <Name>Elwise_f32_IS_INF</Name>
+            <Value>Elwise_f32_IS_INF</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_IS_NAN</Name>
-            <Value>ELWISE_f32_IS_NAN</Value>
+            <Name>Elwise_f32_IS_NAN</Name>
+            <Value>Elwise_f32_IS_NAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_IS_ZERO</Name>
-            <Value>ELWISE_f32_IS_ZERO</Value>
+            <Name>Elwise_f32_IS_ZERO</Name>
+            <Value>Elwise_f32_IS_ZERO</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_LGAMMA</Name>
-            <Value>ELWISE_f32_LGAMMA</Value>
+            <Name>Elwise_f32_LGAMMA</Name>
+            <Value>Elwise_f32_LGAMMA</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_LOG10</Name>
-            <Value>ELWISE_f32_LOG10</Value>
+            <Name>Elwise_f32_LOG10</Name>
+            <Value>Elwise_f32_LOG10</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_LOG_1P</Name>
-            <Value>ELWISE_f32_LOG_1P</Value>
+            <Name>Elwise_f32_LOG_1P</Name>
+            <Value>Elwise_f32_LOG_1P</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_LOG_E</Name>
-            <Value>ELWISE_f32_LOG_E</Value>
+            <Name>Elwise_f32_LOG_E</Name>
+            <Value>Elwise_f32_LOG_E</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_MAX</Name>
-            <Value>ELWISE_f32_MAX</Value>
+            <Name>Elwise_f32_MAX</Name>
+            <Value>Elwise_f32_MAX</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_MIN</Name>
-            <Value>ELWISE_f32_MIN</Value>
+            <Name>Elwise_f32_MIN</Name>
+            <Value>Elwise_f32_MIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_MODULO</Name>
-            <Value>ELWISE_f32_MODULO</Value>
+            <Name>Elwise_f32_MODULO</Name>
+            <Value>Elwise_f32_MODULO</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_MULTIPLY</Name>
-            <Value>ELWISE_f32_MULTIPLY</Value>
+            <Name>Elwise_f32_MULTIPLY</Name>
+            <Value>Elwise_f32_MULTIPLY</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_MULTIPY_CONSTANT</Name>
-            <Value>ELWISE_f32_MULTIPY_CONSTANT</Value>
+            <Name>Elwise_f32_MULTIPY_CONSTANT</Name>
+            <Value>Elwise_f32_MULTIPY_CONSTANT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_POW</Name>
-            <Value>ELWISE_f32_POW</Value>
+            <Name>Elwise_f32_POW</Name>
+            <Value>Elwise_f32_POW</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_REMAINDER</Name>
-            <Value>ELWISE_f32_REMAINDER</Value>
+            <Name>Elwise_f32_REMAINDER</Name>
+            <Value>Elwise_f32_REMAINDER</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_SIN</Name>
-            <Value>ELWISE_f32_SIN</Value>
+            <Name>Elwise_f32_SIN</Name>
+            <Value>Elwise_f32_SIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_SQRT</Name>
-            <Value>ELWISE_f32_SQRT</Value>
+            <Name>Elwise_f32_SQRT</Name>
+            <Value>Elwise_f32_SQRT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_SUBTRACT</Name>
-            <Value>ELWISE_f32_SUBTRACT</Value>
+            <Name>Elwise_f32_SUBTRACT</Name>
+            <Value>Elwise_f32_SUBTRACT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_SUBTRACT_CONSTANT</Name>
-            <Value>ELWISE_f32_SUBTRACT_CONSTANT</Value>
+            <Name>Elwise_f32_SUBTRACT_CONSTANT</Name>
+            <Value>Elwise_f32_SUBTRACT_CONSTANT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_TAN</Name>
-            <Value>ELWISE_f32_TAN</Value>
+            <Name>Elwise_f32_TAN</Name>
+            <Value>Elwise_f32_TAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f32_TGAMMA</Name>
-            <Value>ELWISE_f32_TGAMMA</Value>
+            <Name>Elwise_f32_TGAMMA</Name>
+            <Value>Elwise_f32_TGAMMA</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_ADD</Name>
-            <Value>ELWISE_f64_ADD</Value>
+            <Name>Elwise_f64_ADD</Name>
+            <Value>Elwise_f64_ADD</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_ADD_CONSTANT</Name>
-            <Value>ELWISE_f64_ADD_CONSTANT</Value>
+            <Name>Elwise_f64_ADD_CONSTANT</Name>
+            <Value>Elwise_f64_ADD_CONSTANT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_ARC_COS</Name>
-            <Value>ELWISE_f64_ARC_COS</Value>
+            <Name>Elwise_f64_ARC_COS</Name>
+            <Value>Elwise_f64_ARC_COS</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_ARC_SIN</Name>
-            <Value>ELWISE_f64_ARC_SIN</Value>
+            <Name>Elwise_f64_ARC_SIN</Name>
+            <Value>Elwise_f64_ARC_SIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_ARC_TAN</Name>
-            <Value>ELWISE_f64_ARC_TAN</Value>
+            <Name>Elwise_f64_ARC_TAN</Name>
+            <Value>Elwise_f64_ARC_TAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_ATAN2</Name>
-            <Value>ELWISE_f64_ATAN2</Value>
+            <Name>Elwise_f64_ATAN2</Name>
+            <Value>Elwise_f64_ATAN2</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_CBRT</Name>
-            <Value>ELWISE_f64_CBRT</Value>
+            <Name>Elwise_f64_CBRT</Name>
+            <Value>Elwise_f64_CBRT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_COS</Name>
-            <Value>ELWISE_f64_COS</Value>
+            <Name>Elwise_f64_COS</Name>
+            <Value>Elwise_f64_COS</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_DIVIDE</Name>
-            <Value>ELWISE_f64_DIVIDE</Value>
+            <Name>Elwise_f64_DIVIDE</Name>
+            <Value>Elwise_f64_DIVIDE</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_DIVIDE_CONSTANT</Name>
-            <Value>ELWISE_f64_DIVIDE_CONSTANT</Value>
+            <Name>Elwise_f64_DIVIDE_CONSTANT</Name>
+            <Value>Elwise_f64_DIVIDE_CONSTANT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_ERF</Name>
-            <Value>ELWISE_f64_ERF</Value>
+            <Name>Elwise_f64_ERF</Name>
+            <Value>Elwise_f64_ERF</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_ERFC</Name>
-            <Value>ELWISE_f64_ERFC</Value>
+            <Name>Elwise_f64_ERFC</Name>
+            <Value>Elwise_f64_ERFC</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_EXP</Name>
-            <Value>ELWISE_f64_EXP</Value>
+            <Name>Elwise_f64_EXP</Name>
+            <Value>Elwise_f64_EXP</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_EXP_M1</Name>
-            <Value>ELWISE_f64_EXP_M1</Value>
+            <Name>Elwise_f64_EXP_M1</Name>
+            <Value>Elwise_f64_EXP_M1</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_HYPOT</Name>
-            <Value>ELWISE_f64_HYPOT</Value>
+            <Name>Elwise_f64_HYPOT</Name>
+            <Value>Elwise_f64_HYPOT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_HYP_ARC_COS</Name>
-            <Value>ELWISE_f64_HYP_ARC_COS</Value>
+            <Name>Elwise_f64_HYP_ARC_COS</Name>
+            <Value>Elwise_f64_HYP_ARC_COS</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_HYP_ARC_SIN</Name>
-            <Value>ELWISE_f64_HYP_ARC_SIN</Value>
+            <Name>Elwise_f64_HYP_ARC_SIN</Name>
+            <Value>Elwise_f64_HYP_ARC_SIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_HYP_ARC_TAN</Name>
-            <Value>ELWISE_f64_HYP_ARC_TAN</Value>
+            <Name>Elwise_f64_HYP_ARC_TAN</Name>
+            <Value>Elwise_f64_HYP_ARC_TAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_HYP_COS</Name>
-            <Value>ELWISE_f64_HYP_COS</Value>
+            <Name>Elwise_f64_HYP_COS</Name>
+            <Value>Elwise_f64_HYP_COS</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_HYP_SIN</Name>
-            <Value>ELWISE_f64_HYP_SIN</Value>
+            <Name>Elwise_f64_HYP_SIN</Name>
+            <Value>Elwise_f64_HYP_SIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_HYP_TAN</Name>
-            <Value>ELWISE_f64_HYP_TAN</Value>
+            <Name>Elwise_f64_HYP_TAN</Name>
+            <Value>Elwise_f64_HYP_TAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_IS_INF</Name>
-            <Value>ELWISE_f64_IS_INF</Value>
+            <Name>Elwise_f64_IS_INF</Name>
+            <Value>Elwise_f64_IS_INF</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_IS_NAN</Name>
-            <Value>ELWISE_f64_IS_NAN</Value>
+            <Name>Elwise_f64_IS_NAN</Name>
+            <Value>Elwise_f64_IS_NAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_IS_ZERO</Name>
-            <Value>ELWISE_f64_IS_ZERO</Value>
+            <Name>Elwise_f64_IS_ZERO</Name>
+            <Value>Elwise_f64_IS_ZERO</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_LGAMMA</Name>
-            <Value>ELWISE_f64_LGAMMA</Value>
+            <Name>Elwise_f64_LGAMMA</Name>
+            <Value>Elwise_f64_LGAMMA</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_LOG10</Name>
-            <Value>ELWISE_f64_LOG10</Value>
+            <Name>Elwise_f64_LOG10</Name>
+            <Value>Elwise_f64_LOG10</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_LOG_1P</Name>
-            <Value>ELWISE_f64_LOG_1P</Value>
+            <Name>Elwise_f64_LOG_1P</Name>
+            <Value>Elwise_f64_LOG_1P</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_LOG_E</Name>
-            <Value>ELWISE_f64_LOG_E</Value>
+            <Name>Elwise_f64_LOG_E</Name>
+            <Value>Elwise_f64_LOG_E</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_MAX</Name>
-            <Value>ELWISE_f64_MAX</Value>
+            <Name>Elwise_f64_MAX</Name>
+            <Value>Elwise_f64_MAX</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_MIN</Name>
-            <Value>ELWISE_f64_MIN</Value>
+            <Name>Elwise_f64_MIN</Name>
+            <Value>Elwise_f64_MIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_MODULO</Name>
-            <Value>ELWISE_f64_MODULO</Value>
+            <Name>Elwise_f64_MODULO</Name>
+            <Value>Elwise_f64_MODULO</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_MULTIPLY</Name>
-            <Value>ELWISE_f64_MULTIPLY</Value>
+            <Name>Elwise_f64_MULTIPLY</Name>
+            <Value>Elwise_f64_MULTIPLY</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_MULTIPY_CONSTANT</Name>
-            <Value>ELWISE_f64_MULTIPY_CONSTANT</Value>
+            <Name>Elwise_f64_MULTIPY_CONSTANT</Name>
+            <Value>Elwise_f64_MULTIPY_CONSTANT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_POW</Name>
-            <Value>ELWISE_f64_POW</Value>
+            <Name>Elwise_f64_POW</Name>
+            <Value>Elwise_f64_POW</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_REMAINDER</Name>
-            <Value>ELWISE_f64_REMAINDER</Value>
+            <Name>Elwise_f64_REMAINDER</Name>
+            <Value>Elwise_f64_REMAINDER</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_SIN</Name>
-            <Value>ELWISE_f64_SIN</Value>
+            <Name>Elwise_f64_SIN</Name>
+            <Value>Elwise_f64_SIN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_SQRT</Name>
-            <Value>ELWISE_f64_SQRT</Value>
+            <Name>Elwise_f64_SQRT</Name>
+            <Value>Elwise_f64_SQRT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_SUBTRACT</Name>
-            <Value>ELWISE_f64_SUBTRACT</Value>
+            <Name>Elwise_f64_SUBTRACT</Name>
+            <Value>Elwise_f64_SUBTRACT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_SUBTRACT_CONSTANT</Name>
-            <Value>ELWISE_f64_SUBTRACT_CONSTANT</Value>
+            <Name>Elwise_f64_SUBTRACT_CONSTANT</Name>
+            <Value>Elwise_f64_SUBTRACT_CONSTANT</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_TAN</Name>
-            <Value>ELWISE_f64_TAN</Value>
+            <Name>Elwise_f64_TAN</Name>
+            <Value>Elwise_f64_TAN</Value>
           </Entry>
           <Entry>
-            <Name>ELWISE_f64_TGAMMA</Name>
-            <Value>ELWISE_f64_TGAMMA</Value>
+            <Name>Elwise_f64_TGAMMA</Name>
+            <Value>Elwise_f64_TGAMMA</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_ADD</Name>
+            <Value>Elwise_s16_ADD</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_ADD_CONSTANT</Name>
+            <Value>Elwise_s16_ADD_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_DIVIDE</Name>
+            <Value>Elwise_s16_DIVIDE</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_DIVIDE_CONSTANT</Name>
+            <Value>Elwise_s16_DIVIDE_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_MAX</Name>
+            <Value>Elwise_s16_MAX</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_MIN</Name>
+            <Value>Elwise_s16_MIN</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_MODULO</Name>
+            <Value>Elwise_s16_MODULO</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_MULTIPLY</Name>
+            <Value>Elwise_s16_MULTIPLY</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_MULTIPY_CONSTANT</Name>
+            <Value>Elwise_s16_MULTIPY_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_REMAINDER</Name>
+            <Value>Elwise_s16_REMAINDER</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_SUBTRACT</Name>
+            <Value>Elwise_s16_SUBTRACT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s16_SUBTRACT_CONSTANT</Name>
+            <Value>Elwise_s16_SUBTRACT_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_ADD</Name>
+            <Value>Elwise_s32_ADD</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_ADD_CONSTANT</Name>
+            <Value>Elwise_s32_ADD_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_DIVIDE</Name>
+            <Value>Elwise_s32_DIVIDE</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_DIVIDE_CONSTANT</Name>
+            <Value>Elwise_s32_DIVIDE_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_MAX</Name>
+            <Value>Elwise_s32_MAX</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_MIN</Name>
+            <Value>Elwise_s32_MIN</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_MODULO</Name>
+            <Value>Elwise_s32_MODULO</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_MULTIPLY</Name>
+            <Value>Elwise_s32_MULTIPLY</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_MULTIPY_CONSTANT</Name>
+            <Value>Elwise_s32_MULTIPY_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_REMAINDER</Name>
+            <Value>Elwise_s32_REMAINDER</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_SUBTRACT</Name>
+            <Value>Elwise_s32_SUBTRACT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s32_SUBTRACT_CONSTANT</Name>
+            <Value>Elwise_s32_SUBTRACT_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_ADD</Name>
+            <Value>Elwise_s64_ADD</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_ADD_CONSTANT</Name>
+            <Value>Elwise_s64_ADD_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_DIVIDE</Name>
+            <Value>Elwise_s64_DIVIDE</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_DIVIDE_CONSTANT</Name>
+            <Value>Elwise_s64_DIVIDE_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_MAX</Name>
+            <Value>Elwise_s64_MAX</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_MIN</Name>
+            <Value>Elwise_s64_MIN</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_MODULO</Name>
+            <Value>Elwise_s64_MODULO</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_MULTIPLY</Name>
+            <Value>Elwise_s64_MULTIPLY</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_MULTIPY_CONSTANT</Name>
+            <Value>Elwise_s64_MULTIPY_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_REMAINDER</Name>
+            <Value>Elwise_s64_REMAINDER</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_SUBTRACT</Name>
+            <Value>Elwise_s64_SUBTRACT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_s64_SUBTRACT_CONSTANT</Name>
+            <Value>Elwise_s64_SUBTRACT_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_ADD</Name>
+            <Value>Elwise_u8_ADD</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_ADD_CONSTANT</Name>
+            <Value>Elwise_u8_ADD_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_DIVIDE</Name>
+            <Value>Elwise_u8_DIVIDE</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_DIVIDE_CONSTANT</Name>
+            <Value>Elwise_u8_DIVIDE_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_MAX</Name>
+            <Value>Elwise_u8_MAX</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_MIN</Name>
+            <Value>Elwise_u8_MIN</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_MODULO</Name>
+            <Value>Elwise_u8_MODULO</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_MULTIPLY</Name>
+            <Value>Elwise_u8_MULTIPLY</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_MULTIPY_CONSTANT</Name>
+            <Value>Elwise_u8_MULTIPY_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_REMAINDER</Name>
+            <Value>Elwise_u8_REMAINDER</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_SUBTRACT</Name>
+            <Value>Elwise_u8_SUBTRACT</Value>
+          </Entry>
+          <Entry>
+            <Name>Elwise_u8_SUBTRACT_CONSTANT</Name>
+            <Value>Elwise_u8_SUBTRACT_CONSTANT</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_f32_11x11</Name>
+            <Value>Erode_f32_11x11</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_f32_3x3</Name>
+            <Value>Erode_f32_3x3</Value>
           </Entry>
           <Entry>
             <Name>Erode_f32_5x5</Name>
             <Value>Erode_f32_5x5</Value>
           </Entry>
           <Entry>
+            <Name>Erode_f32_9x9</Name>
+            <Value>Erode_f32_9x9</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_f64_11x11</Name>
+            <Value>Erode_f64_11x11</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_f64_3x3</Name>
+            <Value>Erode_f64_3x3</Value>
+          </Entry>
+          <Entry>
             <Name>Erode_f64_5x5</Name>
             <Value>Erode_f64_5x5</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_f64_9x9</Name>
+            <Value>Erode_f64_9x9</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_s16_11x11</Name>
+            <Value>Erode_s16_11x11</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_s16_3x3</Name>
+            <Value>Erode_s16_3x3</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_s16_5x5</Name>
+            <Value>Erode_s16_5x5</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_s16_9x9</Name>
+            <Value>Erode_s16_9x9</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_s32_11x11</Name>
+            <Value>Erode_s32_11x11</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_s32_3x3</Name>
+            <Value>Erode_s32_3x3</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_s32_5x5</Name>
+            <Value>Erode_s32_5x5</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_s32_9x9</Name>
+            <Value>Erode_s32_9x9</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_u8_11x11</Name>
+            <Value>Erode_u8_11x11</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_u8_3x3</Name>
+            <Value>Erode_u8_3x3</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_u8_5x5</Name>
+            <Value>Erode_u8_5x5</Value>
+          </Entry>
+          <Entry>
+            <Name>Erode_u8_9x9</Name>
+            <Value>Erode_u8_9x9</Value>
           </Entry>
           <Entry>
             <Name>FFT_1D_f32</Name>
@@ -602,20 +970,20 @@
             <Value>MatrixMultiply_f64</Value>
           </Entry>
           <Entry>
-            <Name>MedianFilter_f32_4x4_PAD_SYM</Name>
-            <Value>MedianFilter_f32_4x4_PAD_SYM</Value>
+            <Name>MedianFilter_f32_5x5_PAD_SYM</Name>
+            <Value>MedianFilter_f32_5x5_PAD_SYM</Value>
           </Entry>
           <Entry>
-            <Name>MedianFilter_f32_4x4_PAD_ZERO</Name>
-            <Value>MedianFilter_f32_4x4_PAD_ZERO</Value>
+            <Name>MedianFilter_f32_5x5_PAD_ZERO</Name>
+            <Value>MedianFilter_f32_5x5_PAD_ZERO</Value>
           </Entry>
           <Entry>
-            <Name>MedianFilter_f64_4x4_PAD_SYM</Name>
-            <Value>MedianFilter_f64_4x4_PAD_SYM</Value>
+            <Name>MedianFilter_f64_5x5_PAD_SYM</Name>
+            <Value>MedianFilter_f64_5x5_PAD_SYM</Value>
           </Entry>
           <Entry>
-            <Name>MedianFilter_f64_4x4_PAD_ZERO</Name>
-            <Value>MedianFilter_f64_4x4_PAD_ZERO</Value>
+            <Name>MedianFilter_f64_5x5_PAD_ZERO</Name>
+            <Value>MedianFilter_f64_5x5_PAD_ZERO</Value>
           </Entry>
           <Entry>
             <Name>PinnedMemory_f32_Bandwidth</Name>
@@ -624,6 +992,22 @@
           <Entry>
             <Name>PinnedMemory_f64_Bandwidth</Name>
             <Value>PinnedMemory_f64_Bandwidth</Value>
+          </Entry>
+          <Entry>
+            <Name>PinnedMemory_s16_Bandwidth</Name>
+            <Value>PinnedMemory_s16_Bandwidth</Value>
+          </Entry>
+          <Entry>
+            <Name>PinnedMemory_s32_Bandwidth</Name>
+            <Value>PinnedMemory_s32_Bandwidth</Value>
+          </Entry>
+          <Entry>
+            <Name>PinnedMemory_s64_Bandwidth</Name>
+            <Value>PinnedMemory_s64_Bandwidth</Value>
+          </Entry>
+          <Entry>
+            <Name>PinnedMemory_u8_Bandwidth</Name>
+            <Value>PinnedMemory_u8_Bandwidth</Value>
           </Entry>
           <Entry>
             <Name>Expand_2D_f32_AF_INTERP_BILINEAR</Name>
@@ -642,6 +1026,38 @@
             <Value>Expand_2D_f64_AF_INTERP_NEAREST</Value>
           </Entry>
           <Entry>
+            <Name>Expand_2D_s16_AF_INTERP_BILINEAR</Name>
+            <Value>Expand_2D_s16_AF_INTERP_BILINEAR</Value>
+          </Entry>
+          <Entry>
+            <Name>Expand_2D_s16_AF_INTERP_NEAREST</Name>
+            <Value>Expand_2D_s16_AF_INTERP_NEAREST</Value>
+          </Entry>
+          <Entry>
+            <Name>Expand_2D_s32_AF_INTERP_BILINEAR</Name>
+            <Value>Expand_2D_s32_AF_INTERP_BILINEAR</Value>
+          </Entry>
+          <Entry>
+            <Name>Expand_2D_s32_AF_INTERP_NEAREST</Name>
+            <Value>Expand_2D_s32_AF_INTERP_NEAREST</Value>
+          </Entry>
+          <Entry>
+            <Name>Expand_2D_s64_AF_INTERP_BILINEAR</Name>
+            <Value>Expand_2D_s64_AF_INTERP_BILINEAR</Value>
+          </Entry>
+          <Entry>
+            <Name>Expand_2D_s64_AF_INTERP_NEAREST</Name>
+            <Value>Expand_2D_s64_AF_INTERP_NEAREST</Value>
+          </Entry>
+          <Entry>
+            <Name>Expand_2D_u8_AF_INTERP_BILINEAR</Name>
+            <Value>Expand_2D_u8_AF_INTERP_BILINEAR</Value>
+          </Entry>
+          <Entry>
+            <Name>Expand_2D_u8_AF_INTERP_NEAREST</Name>
+            <Value>Expand_2D_u8_AF_INTERP_NEAREST</Value>
+          </Entry>
+          <Entry>
             <Name>Shrink_2D_f32_AF_INTERP_BILINEAR</Name>
             <Value>Shrink_2D_f32_AF_INTERP_BILINEAR</Value>
           </Entry>
@@ -658,6 +1074,38 @@
             <Value>Shrink_2D_f64_AF_INTERP_NEAREST</Value>
           </Entry>
           <Entry>
+            <Name>Shrink_2D_s16_AF_INTERP_BILINEAR</Name>
+            <Value>Shrink_2D_s16_AF_INTERP_BILINEAR</Value>
+          </Entry>
+          <Entry>
+            <Name>Shrink_2D_s16_AF_INTERP_NEAREST</Name>
+            <Value>Shrink_2D_s16_AF_INTERP_NEAREST</Value>
+          </Entry>
+          <Entry>
+            <Name>Shrink_2D_s32_AF_INTERP_BILINEAR</Name>
+            <Value>Shrink_2D_s32_AF_INTERP_BILINEAR</Value>
+          </Entry>
+          <Entry>
+            <Name>Shrink_2D_s32_AF_INTERP_NEAREST</Name>
+            <Value>Shrink_2D_s32_AF_INTERP_NEAREST</Value>
+          </Entry>
+          <Entry>
+            <Name>Shrink_2D_s64_AF_INTERP_BILINEAR</Name>
+            <Value>Shrink_2D_s64_AF_INTERP_BILINEAR</Value>
+          </Entry>
+          <Entry>
+            <Name>Shrink_2D_s64_AF_INTERP_NEAREST</Name>
+            <Value>Shrink_2D_s64_AF_INTERP_NEAREST</Value>
+          </Entry>
+          <Entry>
+            <Name>Shrink_2D_u8_AF_INTERP_BILINEAR</Name>
+            <Value>Shrink_2D_u8_AF_INTERP_BILINEAR</Value>
+          </Entry>
+          <Entry>
+            <Name>Shrink_2D_u8_AF_INTERP_NEAREST</Name>
+            <Value>Shrink_2D_u8_AF_INTERP_NEAREST</Value>
+          </Entry>
+          <Entry>
             <Name>Rotate_f32_INTERP_NEAREST</Name>
             <Value>Rotate_f32_INTERP_NEAREST</Value>
           </Entry>
@@ -666,20 +1114,92 @@
             <Value>Rotate_f64_INTERP_NEAREST</Value>
           </Entry>
           <Entry>
-            <Name>Sort_f32_ASCENDING</Name>
-            <Value>Sort_f32_ASCENDING</Value>
+            <Name>Rotate_s16_INTERP_NEAREST</Name>
+            <Value>Rotate_s16_INTERP_NEAREST</Value>
           </Entry>
           <Entry>
-            <Name>Sort_f32_DESCENDING</Name>
-            <Value>Sort_f32_DESCENDING</Value>
+            <Name>Rotate_s32_INTERP_NEAREST</Name>
+            <Value>Rotate_s32_INTERP_NEAREST</Value>
           </Entry>
           <Entry>
-            <Name>Sort_f64_ASCENDING</Name>
-            <Value>Sort_f64_ASCENDING</Value>
+            <Name>Rotate_s64_INTERP_NEAREST</Name>
+            <Value>Rotate_s64_INTERP_NEAREST</Value>
           </Entry>
           <Entry>
-            <Name>Sort_f64_DESCENDING</Name>
-            <Value>Sort_f64_DESCENDING</Value>
+            <Name>Rotate_u8_INTERP_NEAREST</Name>
+            <Value>Rotate_u8_INTERP_NEAREST</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_f32_ACENDING</Name>
+            <Value>Sort_f32_ACENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_f32_DECENDING</Name>
+            <Value>Sort_f32_DECENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_f64_ACENDING</Name>
+            <Value>Sort_f64_ACENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_f64_DECENDING</Name>
+            <Value>Sort_f64_DECENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_s16_ACENDING</Name>
+            <Value>Sort_s16_ACENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_s16_DECENDING</Name>
+            <Value>Sort_s16_DECENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_s32_ACENDING</Name>
+            <Value>Sort_s32_ACENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_s32_DECENDING</Name>
+            <Value>Sort_s32_DECENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_s64_ACENDING</Name>
+            <Value>Sort_s64_ACENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_s64_DECENDING</Name>
+            <Value>Sort_s64_DECENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_u16_ACENDING</Name>
+            <Value>Sort_u16_ACENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_u16_DECENDING</Name>
+            <Value>Sort_u16_DECENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_u32_ACENDING</Name>
+            <Value>Sort_u32_ACENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_u32_DECENDING</Name>
+            <Value>Sort_u32_DECENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_u64_ACENDING</Name>
+            <Value>Sort_u64_ACENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_u64_DECENDING</Name>
+            <Value>Sort_u64_DECENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_u8_ACENDING</Name>
+            <Value>Sort_u8_ACENDING</Value>
+          </Entry>
+          <Entry>
+            <Name>Sort_u8_DECENDING</Name>
+            <Value>Sort_u8_DECENDING</Value>
           </Entry>
           <Entry>
             <Name>Sum_1D_f32</Name>
@@ -690,6 +1210,22 @@
             <Value>Sum_1D_f64</Value>
           </Entry>
           <Entry>
+            <Name>Sum_1D_s16</Name>
+            <Value>Sum_1D_s16</Value>
+          </Entry>
+          <Entry>
+            <Name>Sum_1D_s32</Name>
+            <Value>Sum_1D_s32</Value>
+          </Entry>
+          <Entry>
+            <Name>Sum_1D_s64</Name>
+            <Value>Sum_1D_s64</Value>
+          </Entry>
+          <Entry>
+            <Name>Sum_1D_u8</Name>
+            <Value>Sum_1D_u8</Value>
+          </Entry>
+          <Entry>
             <Name>Sum_2D_f32</Name>
             <Value>Sum_2D_f32</Value>
           </Entry>
@@ -698,12 +1234,44 @@
             <Value>Sum_2D_f64</Value>
           </Entry>
           <Entry>
+            <Name>Sum_2D_s16</Name>
+            <Value>Sum_2D_s16</Value>
+          </Entry>
+          <Entry>
+            <Name>Sum_2D_s32</Name>
+            <Value>Sum_2D_s32</Value>
+          </Entry>
+          <Entry>
+            <Name>Sum_2D_s64</Name>
+            <Value>Sum_2D_s64</Value>
+          </Entry>
+          <Entry>
+            <Name>Sum_2D_u8</Name>
+            <Value>Sum_2D_u8</Value>
+          </Entry>
+          <Entry>
             <Name>Transpose_f32</Name>
             <Value>Transpose_f32</Value>
           </Entry>
           <Entry>
             <Name>Transpose_f64</Name>
             <Value>Transpose_f64</Value>
+          </Entry>
+          <Entry>
+            <Name>Transpose_s16</Name>
+            <Value>Transpose_s16</Value>
+          </Entry>
+          <Entry>
+            <Name>Transpose_s32</Name>
+            <Value>Transpose_s32</Value>
+          </Entry>
+          <Entry>
+            <Name>Transpose_s64</Name>
+            <Value>Transpose_s64</Value>
+          </Entry>
+          <Entry>
+            <Name>Transpose_u8</Name>
+            <Value>Transpose_u8</Value>
           </Entry>
       </Menu>
   </Option>
