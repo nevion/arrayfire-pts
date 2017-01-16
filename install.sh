@@ -39,9 +39,10 @@ fi
 if [ ! -e arrayfire-benchmark.git/bin/benchmark_opencl ]
 then
     pushd arrayfire-benchmark.git
-    git checkout pts
+    AF_ROOT=`pwd`
+    ./updateLibraries.sh --build --prefix=${AF_ROOT}
     pushd build
-    cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DArrayFire_DIR=/opt/arrayfire-3/share/ArrayFire/cmake -DOpenCL_INCLUDE_DIR=${OpenCL_INCLUDE_DIR} ..
+    cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DArrayFire_DIR=${AF_ROOT}/arrayfire-3/share/ArrayFire/cmake -DOpenCL_INCLUDE_DIR=${OpenCL_INCLUDE_DIR} ..
     #make -j${NUM_CPU_CORES} benchmark_opencl
     make -j${NUM_CPU_CORES}
     echo $? > ~/install-exit-status
