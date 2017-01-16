@@ -71,6 +71,6 @@ perl -pi -e 's/\e\[(\d+)(;\d+)*m//g' \$LOG_FILE  #scrub ansi codes
 sed -n '/Celero/,\$p' \$LOG_FILE
 awk '/Celero/,0' \$LOG_FILE
 awk 'NR > 4 { print \$0 } NR <= 4 { next }' \$LOG_FILE
-grep -v Baseline \${LOG_FILE} > \${LOG_FILE}.tmp; mv ${LOG_FILE}.tmp ${LOG_FILE}
+grep -v Baseline \${LOG_FILE} > \${LOG_FILE}.tmp; mv \${LOG_FILE}.tmp \${LOG_FILE}
 " > arrayfire
 chmod +x arrayfire
