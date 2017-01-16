@@ -25,6 +25,11 @@ then
     then
         export OpenCL_INCLUDE_DIR=/usr/local/cuda/include/CL
     fi
+else
+    if [ -n OpenCL_INCLUDE_DIR ]
+    then
+        export OpenCL_INCLUDE_DIR=/usr/include
+    fi
 fi
 
 if [ ! -e arrayfire-benchmark.git ]
