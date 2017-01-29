@@ -20,8 +20,7 @@
     <ExternalDependencies>build-utilities,boost-development,cmake,freeimage,glew,glfw,openblas,lapack-development,ncurses-development,blas-development,lapack-development,fftw-development,opencl,CUDA,arrayfire-devel</ExternalDependencies>
     <EnvironmentSize>1.0</EnvironmentSize>
     <ProjectURL>http://davibu.interfree.it/opencl/ArrayFire/ArrayFire.html</ProjectURL>
-    <InternalTags>OpenCL</InternalTags>
-    <InternalTags>CUDA</InternalTags>
+    <InternalTags>OpenCL,CUDA</InternalTags>
     <Maintainer>Jason Newton</Maintainer>
   </TestProfile>
   <TestSettings>
