@@ -18,12 +18,18 @@
 
 if [ -d /usr/local/cuda ]
 then
-    PATH="/usr/local/cuda/bin:$PATH"
-    LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/nvvm/lib64:$LD_LIBRARY_PATH
+    export PATH="/usr/local/cuda/bin:$PATH"
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/nvvm/lib64:$LD_LIBRARY_PATH
     export CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda
     if [ -n OpenCL_INCLUDE_DIR ]
     then
         export OpenCL_INCLUDE_DIR=/usr/local/cuda/include
+    fi
+elif [ -d /opt/rocm/opencl/lib/x86_64 ]
+then
+    if [ -n OpenCL_INCLUDE_DIR ]
+    then
+        export OpenCL_INCLUDE_DIR=/opt/rocm/opencl/include
     fi
 else
     if [ -n OpenCL_INCLUDE_DIR ]
@@ -55,7 +61,11 @@ echo "#!/bin/sh
 cd arrayfire-benchmark.git
 if [ -d /usr/local/cuda ]
 then
-    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/nvvm/lib64:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/nvvm/lib64:\$LD_LIBRARY_PATH
+fi
+if [ -d /opt/rocm/opencl/lib/x86_64 ]
+then
+    export LD_LIBRARY_PATH=/opt/rocm/opencl/lib/x86_64:\$LD_LIBRARY_PATH
 fi
 if [ -n COMPUTE_DEVICE ]
 then
