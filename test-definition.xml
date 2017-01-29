@@ -3,7 +3,7 @@
 <PhoronixTestSuite>
   <TestInformation>
     <Title>ArrayFire</Title>
-    <AppVersion>1.0</AppVersion>
+    <AppVersion>3.4.2</AppVersion>
     <Description>ArrayFire is an GPU and CPU numeric processing library, this test uses the arrayfire benchmarking program from Brian Kloppenborg and modified by Jason Newton
     </Description>
     <ResultScale>&#x3BC;s</ResultScale>
@@ -17,7 +17,7 @@
     <TestType>Processor</TestType>
     <License>Free</License>
     <Status>Verified</Status>
-    <ExternalDependencies>build-utilities,boost-development,cmake,freeimage,glew,lapack-development,ncurses-development,blas-development,lapack-development,fftw3-development,opencl,atlas-development</ExternalDependencies>
+    <ExternalDependencies>build-utilities,boost-development,cmake,freeimage,glew,openblas,lapack-development,ncurses-development,blas-development,lapack-development,fftw-development,opencl,CUDA</ExternalDependencies>
     <EnvironmentSize>1.0</EnvironmentSize>
     <ProjectURL>http://davibu.interfree.it/opencl/ArrayFire/ArrayFire.html</ProjectURL>
     <InternalTags>OpenCL, CUDA</InternalTags>
