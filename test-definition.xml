@@ -36,10 +36,10 @@
           <Value>bin/benchmark_opencl</Value>
           <Message></Message>
         </Entry>
-        <!--<Entry>
+        <Entry>
           <Name>CUDA</Name>
           <Value>bin/benchmark_cuda</Value>
-        </Entry>-->
+        </Entry>
         <!--<Entry>
           <Name>CPU</Name>
           <Value>bin/benchmark_cpu</Value>
