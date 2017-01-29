@@ -4,7 +4,7 @@
   <TestInformation>
     <Title>ArrayFire</Title>
     <AppVersion>1.0</AppVersion>
-    <Description>ArrayFire is an GPU and CPU numeric processing library, this test uses the arrayfire benchmarking program from Shehzan Mohammed
+    <Description>ArrayFire is an GPU and CPU numeric processing library, this test uses the arrayfire benchmarking program from Brian Kloppenborg and modified by Jason Newton
     </Description>
     <ResultScale>μs</ResultScale>
     <Proportion>LIB</Proportion>
